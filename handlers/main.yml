@@ -1,0 +1,9 @@
+---
+# handlers file for filebeat-role
+handlers:
+  - name: restart Filebeat
+    become: true
+    service:
+      name: filebeat
+      state: restarted
+      enabled: true
