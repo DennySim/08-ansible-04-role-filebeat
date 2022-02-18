@@ -27,7 +27,7 @@
 - name: Load Kibana dashboard
   become: true
   command:
-    cmd: filebeat setup
+    cmd: filebeat setup -e
     chdir: /usr/share/filebeat/bin
   register: filebeat_setup
   changed_when: false
